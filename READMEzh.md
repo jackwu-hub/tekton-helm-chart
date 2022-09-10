@@ -1,4 +1,8 @@
 
+实践了一下下面的想法，失败了，在执行添加阿里云helm仓库时，没有带上账号密码，添加helm仓库失败，
+	暂时行不通，因为 这个行为 不是自己能够操控的。
+
+
 
 因为jenkinsX中 tekton-pipeline使用的是这个 helm chart
     但是因为改不了镜像名称，拉取不到，所以复制了这个chat，修改后 上传到了阿里云的helm仓库，这样，我就可以把 jenkinsX中 的tekton-pipeline指向阿里云的helm仓库
