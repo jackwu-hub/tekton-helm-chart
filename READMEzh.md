@@ -24,4 +24,6 @@ tekton-pipeline目录中的 templates目录中的yaml文件不用自己写，
 
     项目名/versionStream/charts/cdf/tekton-pipeline/defaults.yaml  改的是 生成helm 仓库的 项目。
 
-还要注意给这个新复制的仓库开一个和 当前所需要的tekton-pipeline 版本一样的分支，然后所有的修改都提交到这个分支里。比如我这里的版本是 v0.29.0
+还要注意给这个新复制的仓库开一个和 当前所需要的tekton-pipeline 版本一样的分支，然后所有的修改都提交到这个分支里。比如我这里的版本是 v0.29.0, 
+
+最好要对照你复制的这个仓库，默认分支改为 main 分支.
