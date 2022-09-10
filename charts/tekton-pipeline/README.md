@@ -1,19 +1,32 @@
 # tekton helm chart
 
 ## Setup
-First add the Jenkins X chart repository
 
-```sh
-helm repo add jenkins-x https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Once Helm is set up properly, add the repo as follows:
+
+```bash
+helm repo add 139114-cdf https://repomanage.rdc.aliyun.com/helm_repositories/139114-cdf
 ```
+
 If it already exists be sure to update the local cache
 ```
 helm repo update
 ```
 
+
+you can then do
+
+```bash
+helm search repo 139114-cdf/tekton-pipeline
+```
+
+The chart installs resources into the `tekton-pipelines` namespace
+
+
+
 ## Basic install
 ```
-helm upgrade --install tekton jenkins-x/tekton
+helm upgrade --install tekton 139114-cdf/tekton-pipeline
 ```
 
 ## Authenticated Git requests
@@ -22,7 +35,7 @@ If you are working with private git repositories or require secrets to tag or pe
 GitHub Example:
 
 ```sh
-helm upgrade --install --set auth.git.username=bot-user --set auth.git.password=123456abcdef --set auth.git.url=https://github.com tekton jenkins-x/tekton 
+helm upgrade --install --set auth.git.username=bot-user --set auth.git.password=123456abcdef --set auth.git.url=https://github.com tekton 139114-cdf/tekton-pipeline 
 ```
 ## Authenticated Docker registries
 If you are pushing images to authenticated docker registries you can provide basic authentication which will be automatically mounted into Knative Tekton Pipline pods.
@@ -30,7 +43,7 @@ If you are pushing images to authenticated docker registries you can provide bas
 DockerHub Example:
 
 ```sh
-helm upgrade --install --set auth.docker.username=fred --set auth.docker.password=flintstone --set auth.docker.url=https://index.docker.io/v1/  tekton jenkins-x/tekton 
+helm upgrade --install --set auth.docker.username=fred --set auth.docker.password=flintstone --set auth.docker.url=https://index.docker.io/v1/  tekton 139114-cdf/tekton-pipeline
 ```
 ## Configuration options
 
