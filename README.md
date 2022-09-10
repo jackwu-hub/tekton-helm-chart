@@ -43,19 +43,6 @@ make release
 [Helm](https://helm.sh) must be installed to use the charts.
 Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 
-Once Helm is set up properly, add the repo as follows:
-
-```bash
-helm repo add 139114-cdf https://repomanage.rdc.aliyun.com/helm_repositories/139114-cdf
-```
-
-you can then do
-
-```bash
-helm search repo tekton
-```
-
-The chart installs resources into the `tekton-pipelines` namespace
 
 ## Configuration
 
