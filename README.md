@@ -32,6 +32,12 @@ Also, remember to change the `version` in `charts/tekton-pipeline/Chart.yaml`.
 The `app_version` will be set to the `CHART_VERSION` automatically by the makefile if a `CHART_VERSION` is specified.
 For latest set `app_version` to the latest tekton version from the [tekton release page](https://github.com/tektoncd/pipeline/releases) and not `latest`.
 
+Push it to the Helm repository
+
+```bash
+make release
+```
+
 ### Other use cases
 
 [Helm](https://helm.sh) must be installed to use the charts.
@@ -40,7 +46,7 @@ Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 Once Helm is set up properly, add the repo as follows:
 
 ```bash
-helm repo add cdf https://cdfoundation.github.io/tekton-helm-chart/
+helm repo add 139114-cdf https://repomanage.rdc.aliyun.com/helm_repositories/139114-cdf
 ```
 
 you can then do
@@ -55,6 +61,6 @@ The chart installs resources into the `tekton-pipelines` namespace
 
 See chart [readme](charts/tekton-pipeline/README.md) and [values.yaml](charts/tekton-pipeline/values.yaml) for install and config options.
 
-## Repository
+## Referenced
 
-You can view the YAML at [index.yaml](https://cdfoundation.github.io/tekton-helm-chart/index.yaml).
+You can view the YAML at [index.yaml](https://cdfoundation.github.io/tekton-helm-chart).
