@@ -3,11 +3,11 @@ CHART_DIR := charts/${NAME}
 # 带 ?号代表可以通过 外部传入 比如 make CHART_VERSION=0.32.0 fetch
 CHART_VERSION ?= 0.29.0
 
-CHAR_REPO_NAMESPACE ?= 139114-cdf
+CHAR_REPO_NAMESPACE ?= admin
 CHART_REPO ?= https://repomanage.rdc.aliyun.com/helm_repositories/${CHAR_REPO_NAMESPACE}
 
-REPO_USERNAME ?= G3BIR1
-REPO_PASSWORD ?= PP2l6vFvpt
+REPO_USERNAME ?= admin
+REPO_PASSWORD ?= admin
 
 fetch:
 	rm -f ${CHART_DIR}/templates/*.yaml
